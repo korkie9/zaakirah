@@ -7,7 +7,7 @@ import Socials from '@/components/Socials';
 import { Caveat } from 'next/font/google'
 import Link from 'next/link';
 
-const caveat = Caveat({ weight: "400" })
+const caveat = Caveat({ weight: "400", subsets: ["latin"] })
 
 export default function Home() {
   const aboutSection = useRef(null);
