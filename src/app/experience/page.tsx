@@ -1,6 +1,5 @@
-
 "use client";
-import { useRef } from 'react';
+
 import { motion } from 'framer-motion';
 import Socials from '@/components/Socials';
 import { Caveat, Puppies_Play } from 'next/font/google'
