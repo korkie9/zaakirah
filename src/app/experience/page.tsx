@@ -3,6 +3,8 @@
 import { motion } from 'framer-motion';
 import Socials from '@/components/Socials';
 import { Caveat, Puppies_Play } from 'next/font/google'
+import Link from 'next/link';
+import { ArrowLeftCircle } from 'react-feather';
 
 const caveat = Caveat({ weight: "400", subsets: ["latin"] })
 const puppies = Puppies_Play({ weight: "400", subsets: ["latin"] })
@@ -10,6 +12,10 @@ const puppies = Puppies_Play({ weight: "400", subsets: ["latin"] })
 export default function Home() {
   return (
     <div className="flex flex-col min-h-screen items-center justify-center bg-gradient-to-r from-orange-200 to-black-600 p-4">
+
+      <div className="w-full md:w-1/2 lg:w-1/2">
+        <Link className='markdown ' style={{}} href={'/'}><ArrowLeftCircle style={{ fontSize: 20, color: "black" }} /></Link>
+      </div>
       <main className="flex flex-col items-center justify-center gap-4">
         <motion.div
           initial={{ opacity: 0 }}

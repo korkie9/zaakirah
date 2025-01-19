@@ -24,7 +24,7 @@ const Blog: React.FC = () => {
     <>
       {mdxSource && path &&
         <div className="markdown-body lg:p-20 p-5 min-h-screen">
-          <Link className='markdown ' style={{ backgroundColor: '#0d1117' }} href={'/'}><ArrowLeftCircle style={{ fontSize: 20, color: "black" }} /></Link>
+          <Link className='markdown ' style={{ backgroundColor: '#0d1117' }} href={'/blogs'}><ArrowLeftCircle style={{ fontSize: 20, color: "black" }} /></Link>
           <MDXRemote {...mdxSource} />
         </div>
       }
