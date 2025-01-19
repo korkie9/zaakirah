@@ -1,5 +1,5 @@
 'use client'
-import { MDXRemote } from 'next-mdx-remote';
+import { MDXRemote, MDXRemoteSerializeResult } from 'next-mdx-remote';
 import React, { useEffect, useState } from 'react';
 import { ArrowLeftCircle } from 'react-feather';
 import 'github-markdown-css/github-markdown.css';  // Import GitHub Markdown 
@@ -8,7 +8,7 @@ import { usePathname } from 'next/navigation'
 import Link from 'next/link';
 
 const Blog: React.FC = () => {
-  const [mdxSource, setMdxSource] = useState<any>();
+  const [mdxSource, setMdxSource] = useState<MDXRemoteSerializeResult>();
   const path = usePathname()
 
   useEffect(() => {

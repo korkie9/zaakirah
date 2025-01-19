@@ -11,12 +11,6 @@ const caveat = Caveat({ weight: "400", subsets: ["latin"] })
 
 export default function Home() {
   const aboutSection = useRef(null);
-  const scrollToElement = () => {
-    if (aboutSection.current) {
-      //@ts-ignore
-      aboutSection.current.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
   return (
     <div className="flex flex-col min-h-screen items-center justify-center bg-gradient-to-r from-orange-200 to-black-600 p-4">
       <main className="flex flex-col items-center justify-center gap-4">
