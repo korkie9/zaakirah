@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react';
 import { Book } from 'react-feather';
 
 const Blogs: React.FC = () => {
-  const [blogPaths, setBlogPaths] = useState<string[]>(['editors', 'dsfsdf'])
+  const [blogPaths, setBlogPaths] = useState<string[]>([])
 
   useEffect(() => {
     const getBlogNames = async () => {
