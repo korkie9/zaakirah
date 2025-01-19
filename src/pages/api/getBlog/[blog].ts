@@ -2,9 +2,10 @@ import fs from 'fs';
 import path from 'path';
 import { NextApiRequest, NextApiResponse } from 'next';
 import { serialize } from 'next-mdx-remote/serialize';
+import { MDXRemoteSerializeResult } from 'next-mdx-remote';
 
 type ResponseData = {
-  mdxSource: any
+  mdxSource: MDXRemoteSerializeResult
 }
 export default async function getBlogs(req: NextApiRequest,
   res: NextApiResponse<ResponseData>) {
