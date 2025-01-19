@@ -1,0 +1,36 @@
+export interface DateAndHeading {
+  date: string,
+  heading: string
+}
+export function parseMdString(input: string): DateAndHeading {
+  if (!input.includes('-')) return { date: "", heading: input.charAt(0).toUpperCase() + input.slice(1) }
+  const [datePart, headingPart] = input.split('-');
+  if (!parseInt(datePart)) return {
+    date: "", heading: input
+      .split('-')
+      .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+      .join(' ')
+      .replace('.md', '')
+  };
+
+  const day = datePart.slice(0, 2);
+  const month = datePart.slice(2, 4);
+  const year = datePart.slice(4);
+
+  const monthNames = [
+    "January", "February", "March", "April", "May", "June",
+    "July", "August", "September", "October", "November", "December"
+  ];
+  const monthName = monthNames[parseInt(month, 10) - 1];
+
+  const heading = headingPart
+    .split('-')
+    .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+    .join(' ')
+    .replace('.md', '');
+
+  return {
+    date: `${monthName} ${day} ${year}`,
+    heading: heading
+  };
+}

@@ -1,0 +1,11 @@
+/* Import the original GitHub Markdown CSS */
+@import 'github-markdown-css';
+
+/* Custom overrides */
+.markdown-body {
+  /* Change font */
+  font-family: 'Arial', sans-serif;
+
+  /* Customize background and text color */
+  background: linear-gradient(to right, rgba(176, 119, 86), rgba(48, 48, 47));
+}
