@@ -24,7 +24,7 @@ export default function Home() {
             transition={{ duration: 0.5 }}
             className="flex flex-col gap-4 justify-center h-full items-center">
             <h1 className={`${puppiesPlay.className} text-8xl text-center w-full `}>Zaakirah Ecksteen</h1>
-            <p className={`${caveat.className} text-gray-700 text-center w-full text-2xl `}>Student x Cybergirlie x Arachnophobe</p>
+            <p className={`${caveat.className} text-gray-700 text-center w-full text-2xl `}>Student x Cybergirlie x Philomath</p>
             <div className="flex flex-row gap-2">
               <Heart />
               <Link href={"/blogs"}
