@@ -45,7 +45,7 @@ const Blogs: React.FC = () => {
                 <div className={`${caveat.className} shadow-md w-full md:w-1/4 lg:w-1/4 p-2`}>
                   <Link href={`blog/${path}`} className={"text-left "} >
                     <p className="text-3xl flex flex-row items-center gap-2 text-gray-700"><Book />{parsedMd.heading ?? ""}</p>
-                    <p className="text-sm"><em>{parsedMd.date ?? ""}</em></p>
+                    <p className="text-sm text-gray-300"><em>{parsedMd.date ?? ""}</em></p>
 
                   </Link>
                 </div>
