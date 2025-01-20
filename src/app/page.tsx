@@ -14,7 +14,8 @@ const puppiesPlay = Puppies_Play({ weight: "400", subsets: ["latin"] })
 export default function Home() {
   const aboutSection = useRef(null);
   return (
-    <div className="flex flex-col min-h-screen items-center justify-center bg-gradient-to-r from-orange-200 to-black-600 p-4">
+    <div className="flex flex-col min-h-screen items-center justify-between bg-gradient-to-r from-orange-200 to-black-600 p-4">
+      <div></div>
       <main className="flex flex-col items-center justify-center gap-4">
         <section className={` flex flex-col md:flex-row lg:flex-row items-center justify-center gap-4 mb-16`}>
           <motion.div
@@ -73,9 +74,6 @@ export default function Home() {
             in my life my fullest effort
           </p>
         </motion.div>
-      </main>
-      <footer className="">
-
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -85,6 +83,13 @@ export default function Home() {
             <Socials />
           </div>
         </motion.div>
+      </main>
+
+
+      <footer className="items-start w-full pt-32 lg:pt-0 md:pt-0">
+
+        <p className="text-xs text-right">Proudly developed by <em><a className="underline" href="https://justinkorkie.vercel.app">{"Justin Korkie"}</a></em>{" "}2024</p>
+
       </footer>
     </div>
   );
