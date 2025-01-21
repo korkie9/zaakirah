@@ -4,7 +4,7 @@ export interface DateAndHeading {
 }
 export function parseMdString(input: string): DateAndHeading {
   if (!input.includes('-')) return { date: "", heading: input.charAt(0).toUpperCase() + input.slice(1) }
-  const [datePart, headingPart] = input.split('-');
+  const [datePart, _] = input.split('-');
   if (!parseInt(datePart)) return {
     date: "", heading: input
       .split('-')
@@ -23,9 +23,11 @@ export function parseMdString(input: string): DateAndHeading {
   ];
   const monthName = monthNames[parseInt(month, 10) - 1];
 
-  const heading = headingPart
+  const headingArr = input
     .split('-')
-    .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+  headingArr.shift();
+
+  const heading = headingArr?.map((word: string) => word.charAt(0).toUpperCase() + word.slice(1))
     .join(' ')
     .replace('.md', '');
 
