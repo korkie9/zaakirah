@@ -4,7 +4,7 @@ export interface DateAndHeading {
 }
 export function parseMdString(input: string): DateAndHeading {
   if (!input.includes('-')) return { date: "", heading: input.charAt(0).toUpperCase() + input.slice(1) }
-  const [datePart, _] = input.split('-');
+  const [datePart] = input.split('-');
   if (!parseInt(datePart)) return {
     date: "", heading: input
       .split('-')
